@@ -1,6 +1,7 @@
 import React from "react"
 import "../styles/live-post.scss"
 import Layout from "../components/layout"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function Post({ pageContext }) {
   const {
@@ -25,17 +26,23 @@ export default function Post({ pageContext }) {
         <h1>{title}</h1>
         <p className="post-date">{updatedAt}</p>
       </div>
-      <img src={images[0].file.url} className="post-image" alt="post-cover"></img>
-      <div className="post-body" >{comment.raw}</div>
-      <div className="post-body" >{act}</div>
-      <div className="post-body" >{advFee}</div>
-      <div className="post-body" >{createdAt}</div>
-      <div className="post-body" >{doorFee}</div>
-      <div className="post-body" >{drinkCount}</div>
-      <div className="post-body" >{drinkPrice}</div>
-      <div className="post-body" >{openDateTime}</div>
-      <div className="post-body" >{postDate}</div>
-      <div className="post-body" >{startDateTime}</div>
+      <img
+        src={images[0].file.url}
+        className="post-image"
+        alt="post-cover"
+      ></img>
+      <div className="post-body">
+        {documentToReactComponents(JSON.parse(comment.raw))}
+      </div>
+      <div className="post-body">{act}</div>
+      <div className="post-body">{advFee}</div>
+      <div className="post-body">{createdAt}</div>
+      <div className="post-body">{doorFee}</div>
+      <div className="post-body">{drinkCount}</div>
+      <div className="post-body">{drinkPrice}</div>
+      <div className="post-body">{openDateTime}</div>
+      <div className="post-body">{postDate}</div>
+      <div className="post-body">{startDateTime}</div>
     </Layout>
   )
 }

@@ -11,7 +11,7 @@ export default function PostLink({ post }) {
             </div>
             <div className="post-link-text">
                 <h2>{title}</h2>
-                <p className="post-link-body">{title}</p>
+                <p className="post-link-body text-red-600">{title}</p>
                 <p className="post-link-body">{postDate}</p>
             </div>
         </div>

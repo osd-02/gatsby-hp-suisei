@@ -3,8 +3,8 @@ import "../styles/footer.scss"
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            © {new Date().getFullYear()} Dev Blog
+        <footer className="footer text-center">
+            © {new Date().getFullYear()} suisei
         </footer>
     )
 }

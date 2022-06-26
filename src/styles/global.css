@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 html *
 {
-   font-family: "Zen Maru Gothic", sans-serif;
+  font-family: 'DotGothic16', sans-serif;
 }

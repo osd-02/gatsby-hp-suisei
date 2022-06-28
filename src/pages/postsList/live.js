@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../../components/layout"
-import PostLink from "../../components/post-link"
+import Layout from "../../templates/layout"
+import PostLink from "../../molecules/post-link"
 import { graphql } from "gatsby"
 
 export default function Home({ data }) {

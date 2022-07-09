@@ -1,6 +1,6 @@
 import React from "react"
-import "../styles/live-post.scss"
-import Layout from "../templates/layout"
+import "../../styles/live-post.scss"
+import Layout from "../layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function Post({ pageContext }) {

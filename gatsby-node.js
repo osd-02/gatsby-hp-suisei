@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   liveResult.data.allContentfulLivePost.edges.forEach(({ node }) => {
     createPage({
       path: `/post/${node.id}`,
-      component: path.resolve("./src/templates/livePost.js"),
+      component: path.resolve("./src/templates/posts/livePost.js"),
       context: { post: node },
     })
   })
